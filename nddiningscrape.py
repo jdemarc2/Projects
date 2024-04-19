@@ -14,7 +14,6 @@ driver.get(url)
 
 # Find the link element for South Dining Hall
 link = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[@class="cbo_nn_unitNameLink" and contains(text(), "North Dining Hall")]')))
-print(link.get_attribute("outerHTML"))  # Print the HTML of the link element
 link.click()
 
 # Wait for the page to fully load after clicking the South Dining Hall link

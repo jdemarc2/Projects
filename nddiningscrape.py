@@ -56,6 +56,10 @@ for item in items:
         calories_fat = driver.find_element(By.XPATH, '//td[contains(text(),"Calories")]').text
         item_dict['Calories From Fat'] = calories_fat
 
+        # Extract the protein information for the food item
+        protein = driver.find_element(By.XPATH, '//td[@class="cbo_nn_LabelBorderedSubHeader" and contains(., "Protein")]').text
+        item_dict['Protein'] = protein
+        
         # Append the item dictionary to the list
         item_list.append(item_dict)
 
